@@ -1,0 +1,115 @@
+.main{
+    background-color: #353535;
+    padding-bottom: 120px;
+    
+    .grid-blocks{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows:repeat(2, 160px);
+        margin-top: -160px;
+        &__info{
+            width: 100%;
+            height: 100%;
+            background-color: #c4c4c4;
+            .price{
+                color: #fff;
+                padding: 30px 30px 0 30px;
+                font-size: 72px;
+                
+                }
+                .sub__price{
+                    color: #fff;
+                    font-size: 20px;
+                    line-height: 1;
+                    padding-left: 30px;
+                }
+            &:nth-child(1){
+                grid-column: 1/2;
+                grid-row: 1/3;
+                background-color: #fff;
+                padding: 30px;
+                h2{
+                    font-size: 40px;
+                    line-height: 1;
+                    padding: 0;
+                    margin-bottom: 60px;
+                }
+                p:first-of-type{
+                    font-size: 20px;
+                    margin-bottom: 40px;
+                }
+                p:last-of-type{
+                    
+                    color: #c4c4c4;
+                    font-size: 20px;
+                    
+                }
+            }
+            &:nth-child(2){
+                background-color: #404040;
+            }
+            &:nth-child(3){
+                background-color: #4e4e4e;
+            }
+            &:nth-child(4){
+                background-color: #353535;
+            }
+            &:nth-child(5){
+                background-color: #404040;
+            }
+        }
+    
+    }
+    &__moreInfo{
+        .cust{padding-bottom: 6px;}
+        .cust2{padding-bottom: 3px;}
+        .items{
+            display: flex;
+            margin-top: 80px;
+            text-align: center;
+            flex-wrap: wrap;
+            &__item{
+                margin: 0;
+            }
+            img{
+                display: block;
+                
+            }
+           
+            &__head{
+                margin-top: 34px;
+                color: #fff;
+            }
+            &__subtext{
+                padding: 0 15px;
+                width: 320px;
+                margin-top: 24px;
+                color: #fff;
+            }
+        }
+    }
+}
+
+/* .main::before{
+    content: '';
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 52%;
+    height: 80px;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+.main::after{
+    content: '';
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 52%;
+    height: 80px;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+} */
