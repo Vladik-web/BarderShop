@@ -3,23 +3,41 @@
     border-bottom: 1px solid #e5ddd5;
     position: relative;
     background-color: #f8f5f2;
-    &__top{
+}
+.news__top{
         
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.news__review{
+    padding: 0 0 50px 0;
+}
+.news__head{
+    margin-left:80px;
+    text-transform: uppercase;
+}
+.show{
+    outline: none;
+    font-size: 18px;
+    width: 160px;
+    height: 50px;
+    background-color: transparent;
+    border:1px solid #e5ddd5;   
+    font-weight: bold;
+    &:hover{
+        border: 1px solid #d5cabe;
     }
-    &__head{
-        margin-left: 50px;
-    }
-    .show{
-        width: 160px;
-        height: 50px;
-        background-color: transparent;
-        border:1px solid #e5ddd5;
-        font-weight: bold;
+    &:active,
+    &:focus{
+        background-color: #d5c9bd;
+        color: #958c84;
     }
 }
+
+
+
+
 .news::before{
     content: '';
     display: block;
@@ -42,3 +60,69 @@
     height: 80px;
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
+
+.news-items{
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    &__item{
+        display: flex;
+        cursor: pointer;
+        width: 33.3333%;
+        &:hover .news-items__label,&:hover .news-items__label::before,
+        &:focus .news-items__label,&:focus .news-items__label::before{background-color: #826550;}
+        &:active .news-items__label,&:active .news-items__label::before{background-color: #6a4d38;}
+        &:hover .news-items__text,
+        &:focus .news-items__text{
+            color: #826550;
+            text-decoration: underline;
+        }
+        &:active .news-items__text{
+            color: #6a4d38;
+            text-decoration: underline;
+        }
+    }
+    &__label{
+        cursor: pointer;
+        position: relative;
+        margin: 10px 0 0 0;
+        padding-top: 5px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        background-color: #000;
+        line-height: 0.8;
+        color: #fff;
+        span{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 25px;
+            background-color: #000;
+            clip-path: polygon(100% 0, 0 0, 50% 30%);
+            -webkit-clip-path: polygon(100% 0, 0 0, 50% 30%);
+            bottom: -25px;
+            left: 0;
+        }
+        
+        
+
+    }
+    &__text{
+        font-size: 18px;
+        
+        color: rgb(0, 0, 0);
+        line-height: 1.5;
+        text-align: left;
+        max-width: 200px;
+        margin: 0 0 0 15px;
+      
+    }
+}
+
